@@ -11,7 +11,7 @@ Current version - Initial 1.0
 1. Check the *Enable Style Sheet* checkbox in the application properties
 
 ## Global Script Setup
-1. Create a Global Script called "CheckBoxlistFilter"
+1. Create a Global Script called "CheckBoxListFilter"
 2. Drag a JavaScript action into the script
 3. Add the Javascript below into the JavaScript code property
 ```javascript
@@ -79,7 +79,7 @@ function insertAfter(referenceNode, newNode) {
 3. Populate the CheckBoxList with data
 
 ## Page.Load Event Setup
-1. Drag the "CheckBoxlistFilter" script into the Page.Load event
+1. Drag the "CheckBoxListFilter" script into the Page.Load event
 2. The filter matches strings using *Contains* and is case sensitive
 
 ## Customising CSS
