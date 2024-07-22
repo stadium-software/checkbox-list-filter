@@ -82,12 +82,7 @@ function insertAfter(referenceNode, newNode) {
 1. Drag the "CheckBoxListFilter" script into the Page.Load event
 2. The filter matches strings using *Contains* and is case sensitive
 
-## Customising CSS
-1. Open the CSS file called [*checkbox-list-filter-variables.css*](checkbox-list-filter-variables.css) from this repo
-2. Adjust the variables in the *:root* element as you see fit
-
 ## Applying the CSS
-
 The CSS below is required for the correct functioning of the module. Some elements can be [customised](#customising-css) using a variables CSS file.
 
 **Stadium 6.6 or higher**
@@ -99,8 +94,9 @@ The CSS below is required for the correct functioning of the module. Some elemen
 <link rel="stylesheet" href="{EmbeddedFiles}/CSS/checkbox-list-filter-variables.css">
 ``` 
 
-**Versions lower than 6.6**
-1. Copy the CSS from the two css files into the Stylesheet in your application
+## Customising CSS
+1. Open the CSS file called [*checkbox-list-filter-variables.css*](checkbox-list-filter-variables.css) from this repo
+2. Adjust the variables in the *:root* element as you see fit
 
 ## CSS Upgrading
 To upgrade the CSS in this module, follow the [steps outlined in this repo](https://github.com/stadium-software/samples-upgrading)
