@@ -1,0 +1,32 @@
+.check-box-list-container  {
+    .checkbox-list-filter {
+        display: block;
+        margin-left: 4px;
+        position: relative;
+        max-width: var(--checkbox-list-filter-max-width);
+        
+        .checkbox-list-filter-input {
+            width: 100%;
+            padding: 8px var(--checkbox-list-filter-clear-icon-size) 8px 12px;
+            background-color: white;
+        }
+    
+        .clear-list-filter {
+            position: absolute;
+            right: calc(var(--checkbox-list-filter-clear-icon-size) / 2);
+            top: 0;
+            display: none;
+            cursor: pointer;
+            height: 100%;
+            width: var(--checkbox-list-filter-clear-icon-size);
+            background-image: var(--checkbox-list-filter-clear-icon);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: var(--checkbox-list-filter-clear-icon-size);
+        }
+    }
+
+    .checkbox-list-message {
+        margin: 8px 12px;
+    }
+}

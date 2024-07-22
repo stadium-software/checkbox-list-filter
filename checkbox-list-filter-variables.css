@@ -1,0 +1,5 @@
+:root {
+    --checkbox-list-filter-max-width: 300px;
+    --checkbox-list-filter-clear-icon: url("data: image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxZW0iIGhlaWdodD0iMWVtIiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGZpbGw9IiM3Nzc3NzciIGQ9Im0xMiAxMy40bC0yLjkgMi45cS0uMjc1LjI3NS0uNy4yNzV0LS43LS4yNzV0LS4yNzUtLjd0LjI3NS0uN2wyLjktMi45bC0yLjktMi44NzVxLS4yNzUtLjI3NS0uMjc1LS43dC4yNzUtLjd0LjctLjI3NXQuNy4yNzVsMi45IDIuOWwyLjg3NS0yLjlxLjI3NS0uMjc1LjctLjI3NXQuNy4yNzVxLjMuMy4zLjcxM3QtLjMuNjg3TDEzLjM3NSAxMmwyLjkgMi45cS4yNzUuMjc1LjI3NS43dC0uMjc1LjdxLS4zLjMtLjcxMi4zdC0uNjg4LS4zeiIvPjwvc3ZnPg==");
+    --checkbox-list-filter-clear-icon-size: 26px;
+}
