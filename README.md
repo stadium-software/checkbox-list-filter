@@ -5,7 +5,9 @@ When checkbox lists contain many items, finding an item can be cumbersome and fr
 https://github.com/user-attachments/assets/408df2a2-d9cc-4313-b1fe-4e4fda4c503e
 
 # Version 
-Current version - Initial 1.0
+1.0 - initial
+
+1.0.1 Added max-height variable (CSS only)
 
 ## Application Setup
 1. Check the *Enable Style Sheet* checkbox in the application properties
