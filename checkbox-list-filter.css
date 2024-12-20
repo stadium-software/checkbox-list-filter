@@ -8,7 +8,8 @@
         .checkbox-list-filter-input {
             width: 100%;
             padding: 8px var(--checkbox-list-filter-clear-icon-size, 26px) 8px 12px;
-            background-color: white;
+            background-color: var(--checkbox-list-filter-input-background-color, var(--FORM-CONTROL-BACKGROUND-COLOR));
+            border-bottom-color: var(--FORM-CONTROL-BORDER-BOTTOM-COLOR, initial);
         }
     
         .clear-list-filter {

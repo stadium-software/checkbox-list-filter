@@ -9,13 +9,15 @@ https://github.com/user-attachments/assets/408df2a2-d9cc-4313-b1fe-4e4fda4c503e
 
 1.0.1 Added max-height variable (CSS only)
 
+1.0.2 Added input background color variable (CSS only)
+
 ## Application Setup
 1. Check the *Enable Style Sheet* checkbox in the application properties
 
 ## Global Script Setup
 1. Create a Global Script called "CheckBoxListFilter"
 2. Drag a JavaScript action into the script
-3. Add the Javascript below into the JavaScript code property
+3. Add the Javascript below unchanged into the JavaScript code property
 ```javascript
 /* Stadium Script v1.0 https://github.com/stadium-software/checkbox-list-filter */
 let checkboxList = document.querySelectorAll(".filterable-checkbox-list");
