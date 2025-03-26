@@ -2,7 +2,7 @@
 
 When checkbox lists contain many items, finding an item can be cumbersome and frustrating. Here is a simple example of how to add a filter to a checkbox list. 
 
-[](images/view.gif)
+![](images/view.gif)
 
 # Version 
 1.0 - initial
