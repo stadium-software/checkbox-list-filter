@@ -86,11 +86,11 @@ function insertAfter(referenceNode, newNode) {
 1. Drag the "CheckBoxListFilter" script into the Page.Load event
 2. The filter matches strings using *Contains* and is case sensitive
 
-## Applying the CSS
-The CSS below is required for the correct functioning of the module. Some elements can be [customised](#customising-css) using a variables CSS file.
+## CSS
+The CSS below is required for the correct functioning of the module. Variables exposed in the [*checkbox-list-filter-variables.css*](checkbox-list-filter-variables.css) file can be [customised](#customising-css).
 
-**Stadium 6.6 or higher**
-1. Create a folder called *CSS* inside of your Embedded Files in your application
+### Before v6.12
+1. Create a folder called "CSS" inside of your Embedded Files in your application
 2. Drag the two CSS files from this repo [*checkbox-list-filter-variables.css*](checkbox-list-filter-variables.css) and [*checkbox-list-filter.css*](checkbox-list-filter.css) into that folder
 3. Paste the link tags below into the *head* property of your application
 ```html
@@ -98,9 +98,28 @@ The CSS below is required for the correct functioning of the module. Some elemen
 <link rel="stylesheet" href="{EmbeddedFiles}/CSS/checkbox-list-filter-variables.css">
 ``` 
 
-## Customising CSS
+### v6.12+
+1. Create a folder called "CSS" inside of your Embedded Files in your application
+2. Drag the CSS files from this repo [*checkbox-list-filter.css*](checkbox-list-filter.css) into that folder
+3. Paste the link tag below into the *head* property of your application
+```html
+<link rel="stylesheet" href="{EmbeddedFiles}/CSS/checkbox-list-filter.css">
+``` 
+
+### Customising CSS
 1. Open the CSS file called [*checkbox-list-filter-variables.css*](checkbox-list-filter-variables.css) from this repo
 2. Adjust the variables in the *:root* element as you see fit
+3. Stadium 6.12+ users can comment out any variable they do **not** want to customise
+4. Add the [*checkbox-list-filter-variables.css*](checkbox-list-filter-variables.css) to the "CSS" folder in the EmbeddedFiles (overwrite)
+5. Paste the link tag below into the *head* property of your application (if you don't already have it there)
+```html
+<link rel="stylesheet" href="{EmbeddedFiles}/CSS/checkbox-list-filter-variables.css">
+``` 
+6. Add the file to the "CSS" inside of your Embedded Files in your application
 
-## CSS Upgrading
-To upgrade the CSS in this module, follow the [steps outlined in this repo](https://github.com/stadium-software/samples-upgrading)
+**NOTE: Do not change any of the CSS in the 'checkbox-list-filter.css' file**
+
+## Upgrading Stadium Repos
+Stadium Repos are not static. They change as additional features are added and bugs are fixed. Using the right method to work with Stadium Repos allows for upgrading them in a controlled manner. 
+
+How to use and update application repos is described here: [Working with Stadium Repos](https://github.com/stadium-software/samples-upgrading)
