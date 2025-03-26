@@ -2,7 +2,7 @@
 
 When checkbox lists contain many items, finding an item can be cumbersome and frustrating. Here is a simple example of how to add a filter to a checkbox list. 
 
-https://github.com/user-attachments/assets/408df2a2-d9cc-4313-b1fe-4e4fda4c503e
+[](images/view.gif)
 
 # Version 
 1.0 - initial
