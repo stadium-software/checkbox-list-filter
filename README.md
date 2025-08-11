@@ -11,6 +11,8 @@ When checkbox lists contain many items, finding an item can be cumbersome and fr
 
 1.0.2 Added input background color variable (CSS only)
 
+1.1 Fixed duplicating filterinput bug
+
 ## Application Setup
 1. Check the *Enable Style Sheet* checkbox in the application properties
 
@@ -19,9 +21,11 @@ When checkbox lists contain many items, finding an item can be cumbersome and fr
 2. Drag a JavaScript action into the script
 3. Add the Javascript below unchanged into the JavaScript code property
 ```javascript
-/* Stadium Script v1.0 https://github.com/stadium-software/checkbox-list-filter */
+/* Stadium Script v1.1 https://github.com/stadium-software/checkbox-list-filter */
 let checkboxList = document.querySelectorAll(".filterable-checkbox-list");
 for (let i = 0; i < checkboxList.length; i++) {
+    let checkboxListFilter = checkboxList[i].querySelector(".checkbox-list-filter");
+    if (checkboxListFilter) continue;
     let filterField = document.createElement("input");
     filterField.classList.add("form-control", "error-border", "text-box-input", "checkbox-list-filter-input");
     filterField.setAttribute("placeholder", "Filter");
