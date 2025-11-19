@@ -15,6 +15,8 @@ When checkbox lists contain many items, finding an item can be cumbersome and fr
 
 1.2 Integrated CSS into script
 
+1.2.1 Upgraded icon to make color settable in the variables
+
 ## Application Setup
 1. Check the *Enable Style Sheet* checkbox in the application properties
 
@@ -23,7 +25,7 @@ When checkbox lists contain many items, finding an item can be cumbersome and fr
 2. Drag a JavaScript action into the script
 3. Add the Javascript below unchanged into the JavaScript code property
 ```javascript
-/* Stadium Script v1.2 https://github.com/stadium-software/checkbox-list-filter */
+/* Stadium Script v1.2.1 https://github.com/stadium-software/checkbox-list-filter */
 loadCSS();
 let checkboxList = document.querySelectorAll(".filterable-checkbox-list");
 for (let i = 0; i < checkboxList.length; i++) {
@@ -46,7 +48,7 @@ function filterCheckBoxList(e) {
     let hasResults = false;
     let input = e.target;
     let checkboxListFilter = input.closest(".checkbox-list-filter");
-    if (input.value) checkboxListFilter.querySelector(".clear-list-filter").style.display = "block";
+    if (input.value) checkboxListFilter.querySelector(".clear-list-filter").classList.add("show");
     let container = input.closest(".check-box-list-container");
     removeMsg(container);
     let checkboxes = container.querySelectorAll(".checkbox");
@@ -74,7 +76,7 @@ function resetFilter(e) {
     for (let i = 0; i < checkboxes.length; i++) {
         checkboxes[i].style.display = "block";
     }
-    e.target.style.display = "none";
+    e.target.classList.remove("show");
 }
 function removeMsg(cont) {
     if (cont.querySelector(".checkbox-list-message")) cont.querySelector(".checkbox-list-message").remove();
@@ -110,11 +112,21 @@ function loadCSS() {
             display: none;
             cursor: pointer;
             height: 100%;
+            width: calc(var(--checkbox-list-filter-clear-icon-size, 2.6rem) + 1rem);
+            align-items: center;
+        }
+        .clear-list-filter.show {
+            display: inline-grid;
+        }
+        .clear-list-filter:after {
+            content: "";
+            height: var(--checkbox-list-filter-clear-icon-size, 2.6rem);
             width: var(--checkbox-list-filter-clear-icon-size, 2.6rem);
-            background-image: var(--checkbox-list-filter-clear-icon, url("data: image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxZW0iIGhlaWdodD0iMWVtIiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGZpbGw9IiM3Nzc3NzciIGQ9Im0xMiAxMy40bC0yLjkgMi45cS0uMjc1LjI3NS0uNy4yNzV0LS43LS4yNzV0LS4yNzUtLjd0LjI3NS0uN2wyLjktMi45bC0yLjktMi44NzVxLS4yNzUtLjI3NS0uMjc1LS43dC4yNzUtLjd0LjctLjI3NXQuNy4yNzVsMi45IDIuOWwyLjg3NS0yLjlxLjI3NS0uMjc1LjctLjI3NXQuNy4yNzVxLjMuMy4zLjcxM3QtLjMuNjg3TDEzLjM3NSAxMmwyLjkgMi45cS4yNzUuMjc1LjI3NS43dC0uMjc1LjdxLS4zLjMtLjcxMi4zdC0uNjg4LS4zeiIvPjwvc3ZnPg=="));
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: var(--checkbox-list-filter-clear-icon-size, 2.6rem);
+            mask-image: var(--checkbox-list-filter-clear-icon, url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0%200%2024%2024'%3E%3C!--%20Icon%20from%20Material%20Symbols%20by%20Google%20--%3E%3Cpath fill='currentColor' d='M6.4%2019L5%2017.6l5.6-5.6L5%206.4L6.4%205l5.6%205.6L17.6%205L19%206.4L13.4%2012l5.6%205.6l-1.4%201.4l-5.6-5.6z'/%3E%3C/svg%3E"));
+            mask-repeat: no-repeat;
+            mask-position: center;
+            mask-size: contain;
+            background-color: var(--checkbox-list-filter-clear-icon-color, var(--FORM-CONTROL-FONT-COLOR));
         }
     }
     > div:not(.checkbox-list-filter) {
